@@ -10,7 +10,7 @@ Children:
   - Name: Drivetrain
     Base: Subsystem
     Children:
-    - Name: Robot Drive 4
+    - Name: drivetrain
       Base: Robot Drive 4
       Children:
       - Name: frontLeftMotor
@@ -140,23 +140,6 @@ Children:
           name: Output Channel (PWM)
           validators: *id004
           value: '3'
-    - Name: Limit Switch
-      Base: Limit Switch
-      Children: []
-      Properties:
-        Input Channel (Digital): !!robotbuilder.data.properties.ChoicesProperty
-          choices: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '12', '13',
-            '14']
-          default: '1'
-          name: Input Channel (Digital)
-          validators: [DigitalChannel]
-          value: '10'
-        Input Module (Digital): !!robotbuilder.data.properties.ChoicesProperty
-          choices: ['1', '2']
-          default: '1'
-          name: Input Module (Digital)
-          validators: [DigitalChannel]
-          value: '1'
     Properties:
       Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
         name: Default Command, type: Command, validators: null, value: ArmControl}
@@ -194,6 +177,23 @@ Children:
           default: '1'
           name: Output Channel (PWM)
           validators: *id004
+          value: '1'
+    - Name: Limit Switch
+      Base: Limit Switch
+      Children: []
+      Properties:
+        Input Channel (Digital): !!robotbuilder.data.properties.ChoicesProperty
+          choices: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '12', '13',
+            '14']
+          default: '1'
+          name: Input Channel (Digital)
+          validators: [DigitalChannel]
+          value: '10'
+        Input Module (Digital): !!robotbuilder.data.properties.ChoicesProperty
+          choices: ['1', '2']
+          default: '1'
+          name: Input Module (Digital)
+          validators: [DigitalChannel]
           value: '1'
     Properties:
       Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,

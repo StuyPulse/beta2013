@@ -32,6 +32,7 @@ public class  ArmControl extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+        Robot.arm.moveArm(Robot.oi.getGamepad().getRawAxis(4));
     }
 
     // Make this return true when this Command no longer needs to run execute()
