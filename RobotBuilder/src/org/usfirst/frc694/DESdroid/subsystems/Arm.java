@@ -44,5 +44,17 @@ public class Arm extends Subsystem {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     }
+    
+    public void moveArm(double stickVal) {
+        if (stickVal >= 0.5) {
+            armMotor.set(1);
+        }
+        else if (stickVal <= -0.5) {
+            armMotor.set(-1);
+        }
+        else {
+            armMotor.set(0);
+        }
+    }
 }
 

@@ -44,5 +44,30 @@ public class Grabber extends Subsystem {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     }
+    
+    public void in() {
+        upperRoller.set(-1);
+        lowerRoller.set(1);
+    }
+
+    public void out() {
+        upperRoller.set(1);
+        lowerRoller.set(-1);
+    }
+
+    public void rotateUp() {
+        upperRoller.set(-1);
+        lowerRoller.set(-1);
+    }
+
+    public void rotateDown() {
+        upperRoller.set(1);
+        lowerRoller.set(1);
+    }
+
+    public void stop() {
+        upperRoller.set(0);
+        lowerRoller.set(0);
+    }
 }
 

@@ -48,5 +48,10 @@ public class Drivetrain extends Subsystem {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     }
+    
+    public void mecanumDrive(double x, double y, double rotation) {
+        robotDrive4.mecanumDrive_Cartesian(x, y, rotation, 0);
+    }
+    
 }
 
